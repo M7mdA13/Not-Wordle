@@ -4,7 +4,7 @@ const useWordle = (solution) => {
   const [turn, setTurn] = useState(0);
   const [guesses, setGuesses] = useState([...Array(6)]);
   const [history, setHistory] = useState([]);
-  const [currentGuess, setCurrentGuess] = useState('');
+  const [currentGuess, setCurrentGuess] = useState("");
   const [correct, setCorrect] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [usedKeys, setUsedKeys] = useState({});
@@ -70,10 +70,10 @@ const useWordle = (solution) => {
         var newState = state;
         newState += e.key.toLowerCase();
         return newState;
-    });
+      });
     }
   };
-  
+
   const handleClick = (e) => {
     if (e.type === "click") {
       let newKey = e.target.innerText.toLowerCase();
@@ -82,11 +82,17 @@ const useWordle = (solution) => {
           var newState = state;
           newState += newKey;
           return newState;
-      });
+        });
+      }
+      if (newKey === "enter" && currentGuess.length === 5) {
+        submitGuess();
+      }
+      if (newKey === "backspace") {
+        setCurrentGuess((prev) => prev.slice(0, -1));
       }
     }
   };
-  
+
   const submitGuess = () => {
     if (history.includes(currentGuess)) {
       console.log("You already guessed that word");
@@ -96,7 +102,7 @@ const useWordle = (solution) => {
     addNewGuess(completed);
     setHistory((prev) => [...prev, currentGuess]);
     setTurn((prev) => prev + 1);
-  
+
     if (currentGuess === solution) {
       setCorrect(true);
     } else if (turn === 5) {

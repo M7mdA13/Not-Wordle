@@ -14,6 +14,7 @@ export default function Keypad({ usedKeys, handleClick }) {
     { key: "I" },
     { key: "O" },
     { key: "P" },
+    { key: "Backspace" },
   ];
 
   const row2 = [
@@ -26,6 +27,7 @@ export default function Keypad({ usedKeys, handleClick }) {
     { key: "J" },
     { key: "K" },
     { key: "L" },
+    { key: "Enter" },
   ];
 
   const row3 = [
