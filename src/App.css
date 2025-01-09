@@ -12,7 +12,24 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+@media screen and (max-width: 500px) {
+  .App-header {
+    padding: 0;
 
+    background-color: #ffffc5;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    min-height: 100vh;
+    height: fit-content;
+    min-width: 100vw;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    /* color: white; */
+  }
+}
 .App-header {
   background-color: #ffffc5;
   display: flex;
@@ -34,13 +51,13 @@
   padding: 10px;
   border-radius: 20px;
 }
-.heading2{
+.heading2 {
   color: white;
   font-size: 2rem;
   font-weight: 300;
   font-family: Barriecito;
   letter-spacing: 3px;
-    -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px black;
   padding: 1rem;
   border-radius: 20px;
 }
@@ -91,7 +108,7 @@
 .row > div {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   display: block;
   width: 60px;
   height: 60px;
@@ -104,15 +121,15 @@
   font-size: 1.75em;
   color: #404040;
 }
-.yellow{
+.yellow {
   background-color: #ffdc50 !important;
   animation: flip 0.5s ease forwards;
 }
-.green{
+.green {
   background-color: #6cf788 !important;
   animation: flip 0.5s ease forwards;
 }
-.gray{
+.gray {
   background-color: #b1b1b1 !important;
   animation: flip 0.6s ease forwards;
 }
@@ -172,7 +189,7 @@ button.gray {
   background-color: #787c7e;
   color: white;
 }
-.hovered{
+.hovered {
   color: black;
   transform: scale(1.1);
 }
@@ -209,11 +226,11 @@ button.gray {
 }
 
 @keyframes bounce {
-  0% { 
+  0% {
     transform: scale(1);
     border-color: #ddd;
   }
-  50% { 
+  50% {
     transform: scale(1.2);
   }
   100% {
