@@ -1,3 +1,9 @@
+Simple and Fun Wordle Project made using React & Utilizing a random word API through Axion.
+
+
+---------------------------------------------------------------------------------------------------
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
